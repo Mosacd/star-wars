@@ -39,7 +39,7 @@ const CharacterPage = () => {
     return (
         <div className="w-full my-[120px]">
             <div className="max-w-10/12 m-auto">
-            <h1 className="text-[#B39D77] text-[48px] font-semibold mb-[120px]">{character?.name}</h1>
+            <h1 className="text-[#B39D77] text-[48px] font-semibold mb-[120px]">Character Profile: {character?.name}</h1>
             <div className="flex justify-between">
                 <div className="w-full flex flex-col gap-2 max-w-4xl">
                   <Dropdown name={"Films"} link={character.films}/>
@@ -51,7 +51,7 @@ const CharacterPage = () => {
                 <img className="rounded-full" src={img} alt="character" />
                 <div className="flex text-[#B39D77]  text-[24px] flex-col items-start py-[24px] px-[32px] border-1 border-[#B39D77] rounded-[16px]">
                         <p>Name: {character?.name}</p>
-                        <p>Height:{character?.height} cm</p>
+                        <p>Height: {character?.height} cm</p>
                         <p>Mass: {character?.mass} kg</p>
                          <p>Hair color: {character?.hair_color}</p>
                           <p>Skin color: {character?.skin_color}</p>
