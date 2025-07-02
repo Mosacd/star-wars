@@ -30,16 +30,16 @@ const Dropdown = ({ name, link }: { name: string; link: string[] }) => {
         className="bg-black border-b-2 cursor-pointer hover:scale-102 duration-300 border-[#B39D77] w-full px-5 py-2 flex justify-between rounded-[5px]"
         onClick={() => setIsOpen((prev) => !prev)}
       >
-        <h1 className="text-[#B39D77] flex items-center gap-5 text-[40px] font-semibold">
+        <h1 className="text-[#B39D77] flex items-center gap-5 text-[32px] 2xl:text-[40px] font-semibold">
           {name}
         </h1>
         <div
-          className={`text-[#B39D77] flex items-center text-[40px] duration-300 ${
+          className={`text-[#B39D77] flex items-center duration-300 ${
             isOpen ? "rotate-180" : ""
           }`}
         >
           <svg
-            className="size-6"
+            className="size-5 2xl:size-6"
             viewBox="0 -4.5 20 20"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"

@@ -102,15 +102,15 @@ const CharacterPage = () => {
   }
 
   return (
-    <div className="w-full my-[120px]">
-      <div className="max-w-10/12 m-auto">
-        <div className="flex justify-between items-center mb-[120px]">
-          <h1 className="text-[#B39D77] text-[48px] font-semibold">
-            Character Profile: {character?.name}
+    <div className="w-full my-[60px] md:my-[120px]">
+      <div className="max-w-[1400px] px-2 xs:px-10 m-auto">
+        <div className="flex flex-col-reverse md:flex-row max-xl:max-w-3xl gap-10 m-auto justify-between items-center mb-[60px] md:mb-[120px]">
+          <h1 className="text-[#B39D77] flex gap-4 text-[40px] 2xl:text-[48px] font-semibold">
+            <span className="hidden xl:block">Character Profile: </span>{character?.name}
           </h1>
           <Link
             to={"/"}
-            className="text-3xl gap-1 text-[#B39D77] border-2 cursor-pointer hover:scale-102 duration-300 w-full max-w-60 h-15 rounded-lg bg-black flex items-center justify-center"
+            className="text-2xl 2xl:text-3xl gap-1 text-[#B39D77] border-2 cursor-pointer hover:scale-102 duration-300 w-full max-w-55 2xl:max-w-60 h-14 2xl:h-15 rounded-lg bg-black flex items-center justify-center"
           >
             <svg
               className="size-7"
@@ -166,16 +166,16 @@ const CharacterPage = () => {
           </Link>
         </div>
 
-        <div className="flex justify-between">
-          <div className="w-full flex flex-col gap-2 max-w-4xl">
+        <div className="flex flex-col-reverse gap-5 max-xl:items-center xl:flex-row justify-between">
+          <div className="w-full flex flex-col gap-2 max-w-3xl 2xl:max-w-4xl">
             <Dropdown name={"Films"} link={character.films} />
             <Dropdown name={"Species"} link={character.species} />
             <Dropdown name={"Vehicles"} link={character.vehicles} />
             <Dropdown name={"Starships"} link={character.starships} />
           </div>
-          <div className="flex flex-col h-fit bg-black gap-[40px] rounded-[16px] p-[24px] w-full max-w-[480px]">
-            <img className="rounded-full" src={img} alt="character" />
-            <div className="flex text-[#B39D77]  text-[24px] flex-col items-start py-[24px] px-[32px] border-1 border-[#B39D77] rounded-[16px]">
+          <div className="flex items-center flex-col sm:max-xl:max-h-[350px] max-xl:max-w-3xl max-xl:justify-between max-xl:sm:flex-row h-fit bg-black gap-[40px] rounded-[16px] p-[24px] w-full xl:max-w-[400px] 2xl:max-w-[480px]">
+            <img className="max-md:max-w-[250px] max-md:h-[250px] max-xl:max-w-[300px] w-full max-2xl:max-w-[350px] rounded-full" src={img} alt="character" />
+            <div className="flex w-full xl:w-full text-[#B39D77] text-[16px] md:text-[20px] xl:text-[22px] 2xl:text-[24px] flex-col items-start py-[24px] px-[32px] border-1 border-[#B39D77] rounded-[16px]">
               <p>Name: {character?.name}</p>
               <p>Height: {character?.height} cm</p>
               <p>Mass: {character?.mass} kg</p>
