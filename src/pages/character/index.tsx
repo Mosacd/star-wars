@@ -30,7 +30,7 @@ const CharacterPage = () => {
 
   if (isLoading || character == null) {
     return (
-      <div className="m-auto w-fit text-7xl text-[#EFD19F] mt-30">
+      <div className="m-auto w-fit text-4xl sm:text-5xl px-5 xl:text-7xl text-[#EFD19F] mt-30">
         {isLoading ? (
           <div className="w-25 h-25 border-8 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-t-[#EFD19F] border-black rounded-full animate-spin"></div>
         ) : (

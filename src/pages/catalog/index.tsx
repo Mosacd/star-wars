@@ -91,8 +91,8 @@ const Catalog = () => {
 
 
   return (
-    <div className="w-full min-h-screen">
-      <h1 className="w-fit m-auto text-6xl text-[#EFD19F] font-bold mt-10">
+    <div className="w-full min-h-screen px-10">
+      <h1 className="w-fit m-auto text-4xl md:text-5xl lg:text-6xl text-[#EFD19F] font-bold mt-10">
         Start Wars Catalog
       </h1>
       <input
@@ -105,7 +105,7 @@ const Catalog = () => {
           setPage(1);
           updateUrl(1, term); // Setting page=1 & search
         }}
-        className="w-4xl text-2xl mt-20 text-[#EFD19F] focus:outline-none focus:border-[#EFD19F] focus:ring-0 bg-black m-auto block border-[#EFD19F] border-2 px-4 py-2 rounded-lg"
+        className="w-full max-w-4xl text-2xl mt-20 text-[#EFD19F] focus:outline-none focus:border-[#EFD19F] focus:ring-0 bg-black m-auto block border-[#EFD19F] border-2 px-4 py-2 rounded-lg"
       />
 
       {(isLoading || data == null || data.length === 0) && (
@@ -120,11 +120,11 @@ const Catalog = () => {
         </div>
       )}
 
-      <div className="m-auto mt-10 w-fit grid grid-cols-3 gap-x-10 gap-y-10 justify-items-center py-6">
+      <div className="m-auto mt-10 w-fit grid grid-cols-2 md:grid-cols-3 max-sm:gap-x-2 max-lg:md:gap-x-2 gap-x-10 gap-y-10 justify-items-center py-6">
         {!isLoading && data?.map((p) => <Card name={p?.name} />)}
       </div>
 
-      <div className="flex w-full text-2xl justify-center mb-20 gap-3 mt-5">
+      <div className="flex flex-wrap w-full text-2xl justify-center mb-20 gap-3 mt-5">
         <button
           disabled={page === 1}
           onClick={handlePrev}
