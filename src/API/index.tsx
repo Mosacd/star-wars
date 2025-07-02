@@ -1,10 +1,12 @@
 import type { CharacterResponse } from "@/types";
 
 export const fetchCharacterByName = async (name: string) => {
-  const response = await fetch(`https://swapi.py4e.com/api/people/?search=${name}`);
+  const response = await fetch(
+    `https://swapi.py4e.com/api/people/?search=${name}`
+  );
   if (!response.ok) throw new Error("Failed to fetch character data");
   const json: CharacterResponse = await response.json();
-  console.log(json.results[0])
+  console.log(json.results[0]);
   return json.results[0] ?? null;
 };
 
@@ -33,4 +35,3 @@ export async function fetchMultipleResources<T>(urls: string[]): Promise<T[]> {
   const data = await Promise.all(responses.map((res) => res.json()));
   return data;
 }
-

@@ -130,7 +130,7 @@ const Catalog = () => {
         <button
           disabled={page === 1}
           onClick={handlePrev}
-          className={`bg-black w-full max-w-[150px] text-[#F0D09D] border-[#F0D09D] font-semibold  px-5 py-2 border-2 rounded-lg hover:bg-gray-800 ${
+          className={`bg-black w-full max-w-[150px] text-[#F0D09D] border-[#F0D09D] font-semibold  px-5 py-2 border-2 rounded-lg  hover:-translate-y-1 hover:shadow-[0px_2px_0px_#B39D77] duration-300 ${
             page === 1 ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
           }`}
         >
@@ -140,11 +140,11 @@ const Catalog = () => {
           <button
             key={pg}
             onClick={() => handleNum(pg)}
-            className={`w-full max-w-[70px] sm:max-w-[100px] px-5 py-2 border-2 cursor-pointer font-semibold rounded-lg
+            className={`w-full max-w-[70px] sm:max-w-[100px] px-5 py-2 border-2 cursor-pointer font-semibold rounded-lg hover:-translate-y-1 duration-300
       ${
         pg === page
-          ? "bg-[#F0D09D] text-black border-black"
-          : "bg-black text-[#F0D09D] hover:bg-gray-800"
+          ? "bg-[#F0D09D] text-black border-black hover:shadow-[0px_2px_0px_black]"
+          : "bg-black text-[#F0D09D] hover:shadow-[0px_2px_0px_#B39D77]"
       }
       border-[#F0D09D]`}
           >
@@ -155,7 +155,7 @@ const Catalog = () => {
         <button
           disabled={!hasnext || isLoading}
           onClick={handleNext}
-          className={`bg-black w-full max-w-[150px] text-[#F0D09D] border-[#F0D09D] font-semibold px-5 py-2 border-2 rounded-lg hover:bg-gray-800 ${
+          className={`bg-black w-full max-w-[150px] text-[#F0D09D] border-[#F0D09D] font-semibold px-5 py-2 border-2 rounded-lg hover:-translate-y-1 hover:shadow-[0px_2px_0px_#B39D77] duration-300 ${
             !hasnext || isLoading
               ? "opacity-50 cursor-not-allowed"
               : "cursor-pointer"
