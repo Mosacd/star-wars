@@ -126,11 +126,11 @@ const Catalog = () => {
         {!isLoading && data?.map((p) => <Card name={p?.name} />)}
       </div>
 
-      <div className="flex w-full text-xl 2xl:text-2xl justify-center mb-20 gap-3 mt-5">
+      <div className="flex w-full text-xl 2xl:text-2xl justify-center mb-20 gap-1 sm:gap-3 mt-5">
         <button
           disabled={page === 1}
           onClick={handlePrev}
-          className={`bg-black w-full max-w-[150px] text-[#F0D09D] border-[#F0D09D] font-semibold  px-5 py-2 border-2 rounded-lg  hover:-translate-y-1 hover:shadow-[0px_2px_0px_#B39D77] duration-300 ${
+          className={`bg-black w-full max-w-[150px] text-[#F0D09D] border-[#F0D09D] font-semibold  px-2 xs:px-5 py-2 border-2 rounded-lg  hover:-translate-y-1 hover:shadow-[0px_2px_0px_#B39D77] duration-300 ${
             page === 1 ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
           }`}
         >
@@ -155,7 +155,7 @@ const Catalog = () => {
         <button
           disabled={!hasnext || isLoading}
           onClick={handleNext}
-          className={`bg-black w-full max-w-[150px] text-[#F0D09D] border-[#F0D09D] font-semibold px-5 py-2 border-2 rounded-lg hover:-translate-y-1 hover:shadow-[0px_2px_0px_#B39D77] duration-300 ${
+          className={`bg-black w-full max-w-[150px] text-[#F0D09D] border-[#F0D09D] font-semibold px-2 xs:px-5 py-2 border-2 rounded-lg hover:-translate-y-1 hover:shadow-[0px_2px_0px_#B39D77] duration-300 ${
             !hasnext || isLoading
               ? "opacity-50 cursor-not-allowed"
               : "cursor-pointer"
