@@ -91,7 +91,7 @@ const Catalog = () => {
 
 
   return (
-    <div className="w-full min-h-screen px-10">
+    <div className="w-full min-h-screen px-5 sm:px-10">
       <h1 className="w-fit m-auto text-4xl md:text-5xl lg:text-6xl text-[#EFD19F] font-bold mt-10">
         Start Wars Catalog
       </h1>

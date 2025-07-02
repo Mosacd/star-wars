@@ -105,12 +105,12 @@ const CharacterPage = () => {
     <div className="w-full my-[60px] md:my-[120px]">
       <div className="max-w-[1400px] px-2 xs:px-10 m-auto">
         <div className="flex flex-col-reverse md:flex-row max-xl:max-w-3xl gap-10 m-auto justify-between items-center mb-[60px] md:mb-[120px]">
-          <h1 className="text-[#B39D77] flex gap-4 text-[40px] 2xl:text-[48px] font-semibold">
+          <h1 className="text-[#EFD19F] flex gap-4 text-[40px] 2xl:text-[48px] font-semibold">
             <span className="hidden xl:block">Character Profile: </span>{character?.name}
           </h1>
           <Link
             to={"/"}
-            className="text-2xl 2xl:text-3xl gap-1 text-[#B39D77] border-2 cursor-pointer hover:scale-102 duration-300 w-full max-w-55 2xl:max-w-60 h-14 2xl:h-15 rounded-lg bg-black flex items-center justify-center"
+            className="text-2xl 2xl:text-3xl gap-1 text-[#B39D77] border-[#B39D77] border-2 cursor-pointer hover:scale-102 duration-300 w-full max-w-55 2xl:max-w-60 h-14 2xl:h-15 rounded-lg bg-black flex items-center justify-center"
           >
             <svg
               className="size-7"
