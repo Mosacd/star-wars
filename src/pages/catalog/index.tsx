@@ -92,7 +92,7 @@ const Catalog = () => {
 
   return (
     <div className="w-full min-h-screen px-5 sm:px-10">
-      <h1 className="w-fit m-auto text-4xl md:text-5xl lg:text-6xl text-[#EFD19F] font-bold mt-10">
+      <h1 className="w-fit text-center m-auto text-4xl md:text-5xl lg:text-6xl text-[#EFD19F] font-bold mt-10">
         Start Wars Catalog
       </h1>
       <input
@@ -113,7 +113,9 @@ const Catalog = () => {
           {isLoading ? (
             <div className="w-20 h-20 border-6 border-t-[#EFD19F] border-black rounded-full animate-spin"></div>
           ) : searchTerm ? (
-            "Wrong character name"
+            <span className="max-sm:text-2xl max-xl:text-3xl">
+            Wrong character name
+            </span>
           ) : (
             "Failed to get data"
           )}
@@ -124,7 +126,7 @@ const Catalog = () => {
         {!isLoading && data?.map((p) => <Card name={p?.name} />)}
       </div>
 
-      <div className="flex flex-wrap w-full text-2xl justify-center mb-20 gap-3 mt-5">
+      <div className="flex w-full text-xl 2xl:text-2xl justify-center mb-20 gap-3 mt-5">
         <button
           disabled={page === 1}
           onClick={handlePrev}
@@ -138,7 +140,7 @@ const Catalog = () => {
           <button
             key={pg}
             onClick={() => handleNum(pg)}
-            className={`w-full max-w-[100px] px-5 py-2 border-2 cursor-pointer font-semibold rounded-lg
+            className={`w-full max-w-[70px] sm:max-w-[100px] px-5 py-2 border-2 cursor-pointer font-semibold rounded-lg
       ${
         pg === page
           ? "bg-[#F0D09D] text-black border-black"
